@@ -133,6 +133,7 @@ Plug 'tpope/vim-commentary'
 Plug 'sindresorhus/hyper-snazzy'
 Plug 'tpope/vim-surround'
 Plug 'preservim/tagbar'
+Plug 'preservim/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf'
 Plug 'ggreer/the_silver_searcher'
@@ -142,7 +143,7 @@ Plug 'BurntSushi/ripgrep'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'vimwiki/vimwiki'
 Plug 'enricobacis/vim-airline-clock'
-Plug 'mg979/vim-visual-multi'
+" Plug 'mg979/vim-visual-multi'
 call plug#end()
 
 let g:airline_theme='ayu_mirage'
@@ -163,7 +164,6 @@ let g:floaterm_height = 0.9
 let g:floaterm_width = 0.8
 let g:floaterm_opener = 'tabe'
 
-nnoremap <c-t> :TagbarToggle<CR>
 map <C-h> gT 
 map <C-l> gt 
 
@@ -192,5 +192,7 @@ nnoremap <A-s> <cmd>FloatermShow<cr>
 nnoremap <A-n> <cmd>FloatermNew --height=0.9 --width=0.8 <cr>
 nnoremap <A-t> <cmd>FloatermToggle --height=0.9 --width=0.8 <cr>
 nnoremap <A-r> <cmd>FloatermNew ranger <cr>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <c-y> :TagbarToggle<CR>
 
 
