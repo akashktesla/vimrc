@@ -188,12 +188,30 @@ nnoremap <C-A-j> <C-w>-
 nnoremap <A-f> <cmd>Telescope find_files<cr>
 nnoremap <A-g> <cmd>Telescope live_grep<cr>
 nnoremap <A-b> <cmd>Telescope buffers<cr>
-nnoremap <A-c> <cmd>FloatermKill<cr>
-nnoremap <A-s> <cmd>FloatermShow<cr>
-nnoremap <A-n> <cmd>FloatermNew <cr>
-nnoremap <C-t> <cmd>FloatermToggle  <cr>
-nnoremap <A-r> <cmd>FloatermNew ranger <cr>
-nnoremap <A-t> :NERDTreeToggle<CR>
-nnoremap <A-y> :TagbarToggle<CR>
 
+tnoremap <A-t> <C-\><C-N>:FloatermToggle<CR>
+inoremap <A-t> <C-\><C-N>:FloatermToggle<CR>
+nnoremap <A-t> :FloatermToggle<CR>
+
+nnoremap <A-c> <cmd>FloatermKill<cr>
+tnoremap <A-c> <C-\><C-N><cmd>FloatermKill<cr>
+
+nnoremap <A-s> <cmd>FloatermShow<cr>
+
+nnoremap <A-n> <cmd>FloatermNew <cr>
+tnoremap <A-n> <C-\><C-N><cmd>FloatermNew <cr>
+inoremap <A-n> <C-\><C-N><cmd>FloatermNew <cr>
+
+nnoremap <A-r> <cmd>FloatermNew ranger <CR>
+tnoremap <A-r> <C-\><C-N><cmd>FloatermNew ranger <CR>
+inoremap <A-r> <C-\><C-N><cmd>FloatermNew ranger <CR>
+
+nnoremap <A-S-l> <cmd>FloatermNext<CR>
+tnoremap <A-S-l> <C-\><C-N><cmd>FloatermNext<CR>
+
+nnoremap <A-S-h> <cmd>FloatermPrev <CR>
+tnoremap <A-S-h> <C-\><C-N><cmd>FloatermPrev <CR>
+
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-y> :TagbarToggle<CR>
 
