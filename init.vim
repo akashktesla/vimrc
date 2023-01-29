@@ -21,7 +21,7 @@ hi Normal guibg=black ctermbg=black  ctermfg=121
 hi NormalFloat guibg=black ctermbg=black guifg=121 ctermfg=121
 hi NormalNC guibg=black ctermbg=black  ctermfg=121
 
-hi Normal guibg=black ctermbg=black guifg=yellow ctermfg=yellow
+hi Normal guibg=black ctermbg=black guifg=cyan ctermfg=yellow
 
 hi Linenr guibg=black ctermbg=black guifg=121 ctermfg=121
 
@@ -143,12 +143,13 @@ Plug 'BurntSushi/ripgrep'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'vimwiki/vimwiki'
 Plug 'enricobacis/vim-airline-clock'
-" Plug 'mg979/vim-visual-multi'
+
 call plug#end()
 
 let g:airline_theme='ayu_mirage'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#whitespace#enabled = 0
 
 let g:mkdp_open_to_the_world = 1
@@ -160,8 +161,8 @@ endfunction
 let g:mkdp_browserfunc = 'g:EchoUrl'
 
 " floaterm config
-let g:floaterm_height = 0.9
-let g:floaterm_width = 0.8
+let g:floaterm_height = 0.99
+let g:floaterm_width = 0.99
 let g:floaterm_opener = 'tabe'
 
 map <C-h> gT 
@@ -189,10 +190,10 @@ nnoremap <A-g> <cmd>Telescope live_grep<cr>
 nnoremap <A-b> <cmd>Telescope buffers<cr>
 nnoremap <A-c> <cmd>FloatermKill<cr>
 nnoremap <A-s> <cmd>FloatermShow<cr>
-nnoremap <A-n> <cmd>FloatermNew --height=0.9 --width=0.8 <cr>
-nnoremap <A-t> <cmd>FloatermToggle --height=0.9 --width=0.8 <cr>
+nnoremap <A-n> <cmd>FloatermNew <cr>
+nnoremap <C-t> <cmd>FloatermToggle  <cr>
 nnoremap <A-r> <cmd>FloatermNew ranger <cr>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <c-y> :TagbarToggle<CR>
+nnoremap <A-t> :NERDTreeToggle<CR>
+nnoremap <A-y> :TagbarToggle<CR>
 
 
