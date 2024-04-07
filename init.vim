@@ -21,7 +21,7 @@ hi Normal guibg=black ctermbg=black  ctermfg=121
 hi NormalFloat guibg=black ctermbg=black guifg=121 ctermfg=121
 hi NormalNC guibg=black ctermbg=black  ctermfg=121
 
-hi Normal guibg=black ctermbg=black guifg=cyan ctermfg=yellow
+hi Normal guibg=black ctermbg=black guifg=cyan ctermfg=white
 
 hi Linenr guibg=black ctermbg=black guifg=121 ctermfg=121
 
@@ -119,6 +119,9 @@ else
 endif
 call plug#begin()
 Plug 'rust-lang/rust.vim'
+Plug 'evanleck/vim-svelte'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'Himujjal/tree-sitter-svelte'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'voldikss/vim-floaterm'
 Plug 'nvim-telescope/telescope.nvim'
@@ -143,6 +146,9 @@ Plug 'BurntSushi/ripgrep'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'vimwiki/vimwiki'
 Plug 'enricobacis/vim-airline-clock'
+Plug 'MeF0504/vim-pets'
+Plug 'jpalardy/vim-slime', { 'for': 'python' }
+Plug 'hanschen/vim-ipython-cell', { 'for': 'python' }
 
 call plug#end()
 
@@ -164,6 +170,10 @@ let g:mkdp_browserfunc = 'g:EchoUrl'
 let g:floaterm_height = 0.99
 let g:floaterm_width = 0.99
 let g:floaterm_opener = 'tabe'
+
+" tabnine
+let g:TabNine_binary_path = '/bin/tabnine'
+let g:TabNine_complete_func = { -> tabnine#autoimport() }
 
 map <C-h> gT 
 map <C-l> gt 

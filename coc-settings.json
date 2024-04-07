@@ -1,5 +1,6 @@
 {
   "coc.preferences.useQuickfixForLocations": true,
   "coc.preferences.extensionUpdateCheck": "never",
-  "suggest.snippetIndicator": ""
+  "suggest.snippetIndicator": "",
+  "svelte.enable-ts-plugin": true
 }
